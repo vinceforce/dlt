@@ -19,45 +19,8 @@ describe('getAvailabilities', () => {
           starts_at: new Date('2014-08-11 10:30'),
           ends_at: new Date('2014-08-11 11:30'),
         },
-        {
-          kind: 'opening',
-          starts_at: new Date('2014-08-10 09:30'),
-          ends_at: new Date('2014-08-10 12:30'),
-        },
-        {
-          kind: 'appointment',
-          starts_at: new Date('2014-08-10 9:30'),
-          ends_at: new Date('2014-08-11 12:30'),
-        },
-        {
-          kind: 'opening',
-          starts_at: new Date('2014-08-12 09:30'),
-          ends_at: new Date('2014-08-12 12:30'),
-        },
-        {
-          kind: 'opening',
-          starts_at: new Date('2014-08-13 09:30'),
-          ends_at: new Date('2014-08-13 12:30'),
-        },
-        {
-          kind: 'opening',
-          starts_at: new Date('2014-08-14 09:30'),
-          ends_at: new Date('2014-08-14 12:30'),
-        },
-        {
-          kind: 'opening',
-          starts_at: new Date('2014-08-15 09:30'),
-          ends_at: new Date('2014-08-15 12:30'),
-        },
-        {
-          kind: 'opening',
-          starts_at: new Date('2014-08-16 09:30'),
-          ends_at: new Date('2014-08-16 12:30'),
-        }
       ])
     })
-    debugger;
-    console.log("coucou")
     it('should fetch availabilities correctly', async () => {
       const availabilities = await getAvailabilities(new Date('2014-08-10'))
       expect(availabilities.length).toBe(7)
